@@ -8,4 +8,4 @@ Os principais pontos abordados foram:
 * Como iniciar um repositório local com o Git?
 * O que é o GitHub ?
 * Como subir um repositório local para o GitHub?
-* O que é Branch , Merge , Commit?
+* O que é Branch, Merge, Commit?
