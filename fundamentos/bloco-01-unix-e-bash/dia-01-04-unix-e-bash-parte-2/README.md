@@ -1,10 +1,8 @@
 ### Dia 01-04 - Unix & Bash - Parte 2
 
-Os principais pontos abordados foram:
-
 Neste dia o foco foi a prática com exercícios para ver como os comandos do UNIX são úteis.
 
-As habilidades exercitadas foram:
+Os principais pontos abordados foram:
 
 * Utilizar o comando find ;
 * Utilizar os operadores > (maior), >> (maior maior) e | (pipe) no terminal;
