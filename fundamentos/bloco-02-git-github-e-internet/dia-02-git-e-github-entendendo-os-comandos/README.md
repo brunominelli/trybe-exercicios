@@ -1,6 +1,6 @@
 ### Dia 02 - Git & GitHub: Entendendo os comandos
 
-Os principais pontos abordados neste dia foram:
+Os principais pontos abordados foram:
 
 * Como copiar um repositório existente no GitHub para o computador.
 * Como abrir Pull Requests.
