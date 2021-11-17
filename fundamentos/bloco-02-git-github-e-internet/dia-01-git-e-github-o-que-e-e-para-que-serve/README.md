@@ -1,6 +1,6 @@
 ### Dia 01 - Git & GitHub: O que é e para que serve
 
-Os principais pontos abordados neste dia foram:
+Os principais pontos abordados foram:
 
 * O que é o Git?
 * Qual a principal diferença entre o Git e os outros VCS's?
