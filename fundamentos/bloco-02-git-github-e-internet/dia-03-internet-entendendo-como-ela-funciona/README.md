@@ -1,6 +1,6 @@
 ### Dia 03 - Internet: Entendendo como ela funciona
 
-Os principais pontos abordados neste dia foram:
+Os principais pontos abordados foram:
 
 * Como explicar de forma simples como a internet funciona.
 * Compreensão do modelo Cliente & Servidor e identificar suas partes.
