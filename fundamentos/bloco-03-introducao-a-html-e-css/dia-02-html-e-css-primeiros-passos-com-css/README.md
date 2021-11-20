@@ -1,4 +1,4 @@
-## Dia 02 - HTML e CSS - Primeiros passos com CSS
+### Dia 02 - HTML e CSS - Primeiros passos com CSS
 
 Os principais pontos abordados foram:
 
