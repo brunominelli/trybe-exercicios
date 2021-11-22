@@ -31,3 +31,30 @@ li em{
     color: blue;
 }
 
+.java {
+    background-color: pink;
+}
+
+.aliados li a:hover{
+    font-weight: bold;
+}
+
+.aliados a[href*="stackoverflow"]:hover{
+    color: orange;
+}
+
+.aliados a[href*="w3schools"]:hover{
+    color: green;
+}
+
+.aliados a[href*="mdn"]:hover{
+    color: black;
+}
+
+.aliados a[href*="devdocs"]:hover{
+    color: yellow;
+}
+
+.aliados a[href*="trybe"]:hover{
+    color: greenyellow;
+}
