@@ -1,0 +1,66 @@
+body{
+    width: 90%;
+    margin: auto;
+}
+
+h1, h2, h3, h4{
+    text-align: center;
+}
+
+h1 {
+    margin: 20px;
+    float: left;
+}
+
+header{
+    margin: auto;
+    display: inline-block;
+}
+
+nav{
+    margin: 10px auto;
+    float: right;
+}
+
+nav li{
+    display: inline;
+    margin: 12px;
+}
+
+nav a{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 12px;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+    border-bottom: 2px solid black;
+    display: inline-block;
+}
+
+aside{
+    margin: 20px;
+    display: inline;
+    float: right;
+}
+
+table, tr, td{
+    border: 1px solid black;
+    width: 20%;
+    margin: 16px auto;
+}
+
+img{
+    width: 200px;
+}
+
+footer{
+    clear: both;
+}
+
+#fontes li{
+    margin: 20px;
+    list-style: none;
+}
