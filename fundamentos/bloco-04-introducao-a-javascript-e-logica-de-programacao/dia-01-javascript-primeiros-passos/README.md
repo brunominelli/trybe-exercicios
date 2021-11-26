@@ -2,8 +2,8 @@
 
 Os principais pontos abordados foram:
 
-* Escrever códigos em JavaScript que usam variáveis, constantes e tipos primitivos;
+* Como desenvolver códigos em JavaScript que usam variáveis, constantes e tipos primitivos;
 
-* Utilizar conceitos da linguagem como a tipagem dinâmica e operadores lógicos/aritméticos/de atribuição no seu código;
+* Introdução aos conceitos da linguagem como a tipagem dinâmica e operadores lógicos/aritméticos/de atribuição no seu código;
 
-* Criar códigos que usam estruturas condicionais, como o if/else .
+* Como criar códigos que usam estruturas condicionais, como o if/else .
