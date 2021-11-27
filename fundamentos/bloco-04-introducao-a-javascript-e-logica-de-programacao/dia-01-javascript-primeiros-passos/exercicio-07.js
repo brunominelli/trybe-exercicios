@@ -2,7 +2,11 @@ const porcentagem = 100;
 
 console.log('CONVERSÃO DE PORCENTAGEM PARA NOTAS (A - F)\n');
 
-if (porcentagem >= 90) {
+if ((porcentagem > 100) || (porcentagem < 0)){
+
+    console.log('Erro: Valor inválido!');
+
+} else if ((porcentagem >= 90) && (porcentagem <= 100)) {
 
     console.log('Porcentagem: ' + porcentagem + '% | Nota: A');
 

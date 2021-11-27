@@ -3,10 +3,10 @@ let salarioLiquido = 0;
 let aliquotaINSS = 0;
 let aliquotaIR = 0;
 
-console.log('CÁUCULO - SALÁRIO LÍQUIDO\n')
+console.log('CÁLCULO - SALÁRIO LÍQUIDO\n')
 console.log('Salário bruto (R$): ' + salarioBruto + '\n');
 
-// Desconto de aliquota do INSS
+// Desconto de alíquota do INSS
 
 if (salarioBruto <= 1556.94) {
     
@@ -40,9 +40,9 @@ if (salarioBruto <= 1556.94) {
 
 console.log('Salário bruto - INSS (R$): ' + salarioBruto + '\n');
 
-// Fim Ddesconto de aliquota INSS
+// Fim Ddesconto de alíquota INSS
 
-// Desconto de aliquota do IR
+// Desconto de alíquota do IR
 
 if (salarioBruto <= 1903.98) {
 
