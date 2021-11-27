@@ -109,9 +109,3 @@ for(index = 0; index < array25.length; index++){
     
     console.log(array25[index] / 2);
 }
-
-// Bônus 01
-
-// Bônus 02
-
-// Bônus 03
