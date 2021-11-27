@@ -6,4 +6,4 @@ Os principais pontos abordados foram:
 
 * Introdução aos conceitos da linguagem como a tipagem dinâmica e operadores lógicos/aritméticos/de atribuição no seu código;
 
-* Como criar códigos que usam estruturas condicionais, como o if/else .
+* Como criar códigos que usam estruturas condicionais, como o if/else.
