@@ -105,14 +105,14 @@ let conta = {
   console.log('A Jogadora possui ' + player.medals.golden + ' medalhas de ouro e ' + player.medals.silver + ' medalhas de prata.');
 
 /* FOR/IN */
-// Exemplo 04
+// Exemplo 01
 let cars = ['Saab', 'Volvo', 'BMW'];
 
 for (let index in cars) {
   console.log(cars[index]);
 }
 
-// Exemplo 05 
+// Exemplo 02
 let car = {
     type: 'Fiat',
     model: '500',
@@ -123,7 +123,7 @@ for (let index in car) {
     console.log(index, car[index]);
 }
 
-// Exercício 02
+// Exercício 01
 let names = {
     person1: 'João',
     person2: 'Maria',
@@ -134,7 +134,7 @@ for(let key in names){
     console.log('Olá ' + names[key]);
 }
 
-// Exercício 03
+// Exercício 02
 let car = {
     model: 'A3 Sedan',
     manufacturer: 'Audi',
@@ -146,3 +146,70 @@ for(let key in car){
 }
 
 /* FUNÇÕES */
+// Exemplo 01
+
+// Sem função
+let nome = 'João';
+
+console.log('Bom dia, ' + nome);
+
+
+// Com função
+function bomDiaTryber(nome) {
+    console.log('Bom dia, ' + nome);
+}
+
+bomDiaTryber('João'); // Bom dia, João
+bomDiaTryber('Julia'); // Bom dia, Julia
+bomDiaTryber('Marcelo'); // Bom dia, Marcelo
+
+// Exemplo 02
+function bomDia() {
+    return 'Bom dia!';
+  }
+  
+console.log(bomDia()); // Bom dia!
+
+// Exemplo 03
+let status = 'deslogado';
+
+function logarDeslogar() {
+  if (status === 'deslogado') {
+    status = 'logado';
+  } else {
+    status = 'deslogado';
+  }
+}
+
+console.log(status); // deslogado
+
+logarDeslogar();
+console.log(status); // logado
+
+logarDeslogar();
+console.log(status); // deslogado
+
+console.log('O usuário está ' + status); // O usuário está deslogado
+
+// Exemplo 04
+// Com função
+function soma(a, b) {
+    return a + b;
+}
+  
+console.log(soma(5, 2)); // 7
+
+// Exemplo 05
+function maiorNum(primeiroNum, segundoNum) {
+    if (primeiroNum > segundoNum) {
+        return primeiroNum + ' é maior que ' + segundoNum;
+    } else if (segundoNum > primeiroNum) {
+        return segundoNum + ' é maior que ' + primeiroNum;
+    } else {
+        return 'Os números são iguais';
+    }
+}
+
+console.log(maiorNum(10, 20)); // 20 é maior que 10
+console.log(maiorNum(2, -5)); // 2 é maior que -5
+console.log(maiorNum(1, 1)); // Os números são iguais
