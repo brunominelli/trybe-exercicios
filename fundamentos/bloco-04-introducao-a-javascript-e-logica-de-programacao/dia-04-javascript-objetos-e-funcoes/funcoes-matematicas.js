@@ -6,7 +6,11 @@
 // Contantes das funções
 const a = 9;
 const b = 3;
-const c = 7
+const c = 7;
+const valor = -2;
+const anguloUm = 30;
+const anguloDois = 60;
+const anguloTres = 90;
 
 // Função: Adição
 function adicao(a,b){
@@ -78,3 +82,28 @@ function maiorDeTresNumeros(a,b,c){
 console.log(maiorDeTresNumeros(a,b,c));
 
 // Exercício 04
+console.log('\nExercício 04 - Positive ou Negative');
+function positiveOrNegative(valor){
+    if (valor > 0) {
+        return 'Valor positivo!';
+    } else if (valor < 0 ){
+        return 'Valor negativo!';
+    } else return 'Zero';
+}
+
+console.log(positiveOrNegative(valor));
+
+// Exercício 05
+console.log('\nExercício 05 - Triângulo!');
+function triangulo(anguloUm, anguloDois, anguloTres){
+    let angulo = anguloUm + anguloDois + anguloTres;
+    if (angulo < 180) {
+        return 'Erro: A soma dos ângulos é menor que 180°! ' + false;
+    } else if (angulo > 180) {
+        return 'Erro: A soma dos ângulos é maior do que 180°! ' + false;
+    } else if (angulo === 180) {
+        return 'A soma dos ângulos é igual à 180°! Você tem um Triângulo!!! ' + true;
+    }
+}
+
+console.log(triangulo(anguloUm, anguloDois, anguloTres));
