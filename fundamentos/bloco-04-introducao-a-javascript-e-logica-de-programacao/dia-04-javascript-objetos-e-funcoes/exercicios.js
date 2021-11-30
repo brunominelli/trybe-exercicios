@@ -193,3 +193,39 @@ function verificaFinalDaPalavra(word, ending){
 
 console.log('Palavra: ' + word + ' | Final da palavra: ' + ending);
 console.log('Resultado: ' + verificaFinalDaPalavra(word,ending));
+
+/* ---------------------------------------------------------------- */
+
+/* BÔNUS */
+// Exercício 01
+console.log('\nBônus 01 - Romanos para Decimal');
+
+const numero = 'MMXXI';
+
+const algarismosRomanos = {
+  i: 1, 
+  v: 5, 
+  x: 10, 
+  l: 50, 
+  c: 100, 
+  d: 500, 
+  m: 1000
+}
+
+function converterRomanosParaDecimal(numero){
+  numero = numero.toLowerCase();
+  const stringNumero = numero.length;
+  let resultado = algarismosRomanos[numero[stringNumero - 1]];
+  let valorSomado = algarismosRomanos[numero[stringNumero - 1]];
+  
+  for(let index = 2; index <= stringNumero; index++){
+    const algarismo = algarismosRomanos[numero[stringNumero - index]];
+    if (valorSomado <= algarismo){
+      resultado += algarismo;
+    } else resultado -= algarismo;
+    valorSomado <= algarismo;
+  }
+  return resultado;
+}
+console.log('Número Romano.: ' + numero);
+console.log('Número Decimal: ' + converterRomanosParaDecimal(numero));
