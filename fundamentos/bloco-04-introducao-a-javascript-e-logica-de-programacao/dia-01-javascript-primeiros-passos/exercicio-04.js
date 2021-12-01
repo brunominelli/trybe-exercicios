@@ -2,8 +2,10 @@ const number = 5;
 
 console.log('POSITIVE OR NEGATIVE\n');
 
-if (number >= 0) {
+if (number > 0) {
 
     console.log('POSITIVE');
-    
-} else console.log('NEGATIVE');
+} else if (number < 0) {
+
+    console.log('NEGATIVE');
+} else console.log('ZERO');
