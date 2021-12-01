@@ -200,7 +200,7 @@ console.log('Resultado: ' + verificaFinalDaPalavra(word,ending));
 // Exercício 01
 console.log('\nBônus 01 - Romanos para Decimal');
 
-const numero = 'MMXXI';
+const numero = 'MXMIX';
 
 const algarismosRomanos = {
   i: 1, 
@@ -214,17 +214,20 @@ const algarismosRomanos = {
 
 function converterRomanosParaDecimal(numero){
   numero = numero.toLowerCase();
+  numero = numero.split('');
   const stringNumero = numero.length;
   let resultado = algarismosRomanos[numero[stringNumero - 1]];
   let valorSomado = algarismosRomanos[numero[stringNumero - 1]];
   
-  for(let index = 2; index <= stringNumero; index++){
+  for (let index = 2; index <= stringNumero; index++){
     const algarismo = algarismosRomanos[numero[stringNumero - index]];
-    if (valorSomado <= algarismo){
+    if (valorSomado <= algarismo) {
       resultado += algarismo;
     } else resultado -= algarismo;
-    valorSomado <= algarismo;
+
+    valorSomado = algarismo;
   }
+
   return resultado;
 }
 console.log('Número Romano.: ' + numero);
