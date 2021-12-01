@@ -232,3 +232,119 @@ function converterRomanosParaDecimal(numero){
 }
 console.log('Número Romano.: ' + numero);
 console.log('Número Decimal: ' + converterRomanosParaDecimal(numero));
+
+// Exercício 02
+const vector = [[1, 2], [3,4,5,6], [7,8,9,10]];
+
+console.log('\nBônus 02 - Array de Números Pares');
+function arrayOfNumbers(vector){
+  const evenNumbers = [];
+
+  for(let i = 0; i < vector.length; i++){
+    const arrays = vector[i];
+
+    for(let j = 0; j < arrays.length; j++){
+      const numbers = arrays[j];
+      
+      if(arrays[j] % 2 === 0){
+        evenNumbers.push(numbers);
+      }
+    }
+  }
+  return evenNumbers;
+}
+
+console.log('Vetor........: ' + vector);
+console.log('Números Pares: ' + arrayOfNumbers(vector));
+
+// Exercício 03
+const basket = [
+  'Melancia', 'Abacate', 'Melancia', 'Melancia', 'Uva', 'Laranja',
+  'Jaca', 'Pera', 'Melancia', 'Uva', 'Laranja', 'Melancia',
+  'Banana', 'Uva', 'Pera', 'Abacate', 'Laranja', 'Abacate',
+  'Banana', 'Melancia', 'Laranja', 'Laranja', 'Jaca', 'Uva',
+  'Banana', 'Uva', 'Laranja', 'Pera', 'Melancia', 'Uva',
+  'Jaca', 'Banana', 'Pera', 'Abacate', 'Melancia', 'Melancia',
+  'Laranja', 'Pera', 'Banana', 'Jaca', 'Laranja', 'Melancia',
+  'Abacate', 'Abacate', 'Pera', 'Melancia', 'Banana', 'Banana',
+  'Abacate', 'Uva', 'Laranja', 'Banana', 'Abacate', 'Uva',
+  'Uva', 'Abacate', 'Abacate', 'Melancia', 'Uva', 'Jaca',
+  'Uva', 'Banana', 'Abacate', 'Banana', 'Uva', 'Banana',
+  'Laranja', 'Laranja', 'Jaca', 'Jaca', 'Abacate', 'Jaca',
+  'Laranja', 'Melancia', 'Pera', 'Jaca', 'Melancia', 'Uva',
+  'Abacate', 'Jaca', 'Jaca', 'Abacate', 'Uva', 'Laranja',
+  'Pera', 'Melancia', 'Jaca', 'Pera', 'Laranja', 'Jaca',
+  'Pera', 'Melancia', 'Jaca', 'Banana', 'Laranja', 'Jaca',
+  'Banana', 'Pera', 'Abacate', 'Uva',
+];
+
+const newBasket = {};
+
+console.log('\nBônus 03 - Cesta de Frutas')
+for(let i = 0; i < basket.length; i++){
+  const fruit = basket[i];
+  if (!newBasket[fruit]) newBasket[fruit] = 0;
+  newBasket[fruit]++;
+}
+
+const result = [];
+for(let fruits in newBasket){
+  let message = `${newBasket[fruits]} ${fruits}`;
+  if (newBasket[fruits] > 1) message += 's';
+  result.push(message);
+}
+
+console.log(`Sua cesta possui:  ${result.join(', ')}.`);
+
+// Objeto dos exercícios bõnus 04 e 05
+let moradores = {
+  blocoUm: [
+    {
+      nome: 'Luiza',
+      sobrenome: 'Guimarães',
+      andar: 10,
+      apartamento: 1005,
+    },
+    {
+      nome: 'William',
+      sobrenome: 'Albuquerque',
+      andar: 5,
+      apartamento: 502,
+    },
+  ],
+  blocoDois: [
+    {
+      nome: 'Murilo',
+      sobrenome: 'Ferraz',
+      andar: 8,
+      apartamento: 804,
+    },
+    {
+      nome: 'Zoey',
+      sobrenome: 'Brooks',
+      andar: 1,
+      apartamento: 101,
+    },
+  ],
+};
+
+// Exercício 04
+console.log('O morador de nome ' 
+            + moradores.blocoDois[1].nome + ' ' 
+            + moradores.blocoDois[1].sobrenome + ' mora no ' 
+            + moradores.blocoDois[1].andar + 'º andar, apartamento ' 
+            + moradores.blocoDois[1].apartamento + '.');
+
+// Exercício 05
+
+console.log(moradores.blocoUm[0].nome + ' ' + moradores.blocoUm[0].sobrenome);
+
+console.log('\nMoradores do Bloco 01');
+for(let i = 0; i < moradores.blocoUm.length; i++){
+    console.log(moradores.blocoUm[i].nome + ' ' + moradores.blocoUm[i].sobrenome);
+}
+
+console.log('\nMoradores do Bloco 02');
+for(let i = 0; i < moradores.blocoUm.length; i++){
+  console.log(moradores.blocoDois[i].nome + ' ' + moradores.blocoDois[i].sobrenome);
+}
