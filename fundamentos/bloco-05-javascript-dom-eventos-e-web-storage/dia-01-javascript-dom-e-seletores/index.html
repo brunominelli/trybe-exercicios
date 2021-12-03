@@ -86,6 +86,13 @@
         upperCaseParagraph(textParagraph());
         
         // Crie uma função que exiba o conteúdo de todas as tags <p> no console.
+        function consoleParagraph(){
+        let arrayParagraph = document.getElementsByTagName('p');
+            for (let i = 0; i < arrayParagraph.length; i += 1) {
+                console.log(arrayParagraph[i].innerText);
+            }
+        }
+        consoleParagraph();
     </script>
   </body>
 </html>
