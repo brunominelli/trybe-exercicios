@@ -20,6 +20,7 @@
         </section>
       </main>
     <script>
+      /* PARTE 01 */
       // 1. Acesse o elemento elementoOndeVoceEsta.
       console.log(document.getElementById('elementoOndeVoceEsta'));
 
@@ -43,6 +44,28 @@
 
       // 8. Agora acesse o terceiroFilho a partir de pai.
       console.log(document.getElementById('pai').lastElementChild.previousElementSibling);
+
+      /* PARTE 02 */
+      // 1. Crie um irmão para elementoOndeVoceEsta.
+      const pai = document.getElementById('pai');
+      const irmaoElementoOndeVoceEsta = document.createElement('section');
+      irmaoElementoOndeVoceEsta.id = 'irmaoElementoOndeVoceEsta';
+      console.log(pai.appendChild(irmaoElementoOndeVoceEsta));
+
+      // 2. Crie um filho para elementoOndeVoceEsta.
+      const elementoOndeVoceEsta = document.getElementById('elementoOndeVoceEsta');
+      const novoFilho = document.createElement('section');
+      novoFilho.id = 'novoFilho';
+      console.log(elementoOndeVoceEsta.appendChild(novoFilho));
+
+      // 3. Crie um filho para primeiroFilhoDoFilho.
+      const primeiroFilhoDoFilho = document.getElementById('primeiroFilhoDoFilho');
+      const novoFilhoDoFilho = document.createElement('section');
+      novoFilhoDoFilho.id = 'novoFilhoDoFilho';
+      console.log(primeiroFilhoDoFilho.appendChild(novoFilhoDoFilho));
+      
+      // 4. A partir desse filho criado, acesse terceiroFilho.
+      console.log(document.getElementById('novoFilhoDoFilho').parentElement.parentElement.nextElementSibling);
     </script>
 </body>
 </html>
