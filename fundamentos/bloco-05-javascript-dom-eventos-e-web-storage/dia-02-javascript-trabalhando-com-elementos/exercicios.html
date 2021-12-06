@@ -74,6 +74,10 @@
         tagMain.appendChild(tagSection);
 
         // 4. Adicione a tag p como filho do section criado no passo 3 e coloque algum texto;
+        const tagParagraph = document.createElement('p');
+        tagParagraph.innerText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet rhoncus nibh, non interdum felis. Vivamus arcu ante, bibendum eu porttitor eget, mattis ac metus. Curabitur mattis sodales faucibus. Morbi ultrices quis quam ut euismod. Aenean quis arcu libero. In quis lobortis tellus. Quisque ut odio eget justo euismod hendrerit quis eget elit. Aliquam erat volutpat. Sed mattis dignissim diam, vitae commodo massa facilisis eget.'
+        tagSection.appendChild(tagParagraph);
+
         // 5. Adicione a tag section com a classe left-content como filho da tag main criada no passo 2;
         // 6. Adicione a tag section com a classe right-content como filho da tag main criada no passo 2;
         // 7. Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe small-image. Esse elemento deve ser filho do section criado no passo 5;
