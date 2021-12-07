@@ -56,7 +56,7 @@ function onClickButtonHoliday() {
     
     buttonHoliday.addEventListener('click', function() {
         for (let index = 0; index < elementClassHoliday.length; index += 1) {
-            if (elementClassHoliday[index].style.backgroundColor === color){
+            if (elementClassHoliday[index].style.backgroundColor === color) {
                 elementClassHoliday[index].style.backgroundColor = backgroundColor;
             } else elementClassHoliday[index].style.backgroundColor = color;
         }
@@ -77,7 +77,7 @@ createButtonFriday('Sexta-Feira');
 
 // Exercício 05
 let array = [4, 11, 18, 25];
-function onClickButtonFriday(array){
+function onClickButtonFriday(array) {
     let buttonFriday = document.getElementById('btn-friday');
     let elementClassFriday = document.getElementsByClassName('friday');
     let string = "'It's friday then!' - Mufasa";
@@ -86,11 +86,18 @@ function onClickButtonFriday(array){
     console.log(elementClassFriday);
 
     buttonFriday.addEventListener('click', function() {
-        for(let index = 0; index < elementClassFriday.length; index += 1) {
-            if(elementClassFriday[index].innerHTML !== string) {
+        for (let index = 0; index < elementClassFriday.length; index += 1) {
+            if (elementClassFriday[index].innerHTML !== string) {
                 elementClassFriday[index].innerHTML = string;
             } else elementClassFriday[index].innerHTML = array[index];
         }
     })
 }
 onClickButtonFriday(array);
+
+// Exercício 06
+// Exercício 07
+// Exercício 08
+// Exercício 09
+// Exercício 10
+// Exercício Bônus
