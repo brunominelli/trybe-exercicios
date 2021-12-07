@@ -58,9 +58,7 @@ function onClickButtonHoliday() {
         for (let index = 0; index < elementClassHoliday.length; index += 1) {
             if (elementClassHoliday[index].style.backgroundColor === color){
                 elementClassHoliday[index].style.backgroundColor = backgroundColor;
-            } else {
-                elementClassHoliday[index].style.backgroundColor = color;
-            }
+            } else elementClassHoliday[index].style.backgroundColor = color;
         }
     });
     
@@ -70,9 +68,29 @@ onClickButtonHoliday();
 // Exercício 04
 function createButtonFriday(string) {
     const buttonFriday = document.createElement('button');
-    const buttonsContainer = document.getElementsByClassName('buttons-container');
+    const elementClassFriday = document.getElementsByClassName('buttons-container');
     buttonFriday.id = 'btn-friday';
     buttonFriday.innerHTML = string;
-    buttonsContainer[0].appendChild(buttonFriday);
+    elementClassFriday[0].appendChild(buttonFriday);
 }
 createButtonFriday('Sexta-Feira');
+
+// Exercício 05
+let array = [4, 11, 18, 25];
+function onClickButtonFriday(array){
+    let buttonFriday = document.getElementById('btn-friday');
+    let elementClassFriday = document.getElementsByClassName('friday');
+    let string = "'It's friday then!' - Mufasa";
+    console.log(buttonFriday);
+    console.log(string);
+    console.log(elementClassFriday);
+
+    buttonFriday.addEventListener('click', function() {
+        for(let index = 0; index < elementClassFriday.length; index += 1) {
+            if(elementClassFriday[index].innerHTML !== string) {
+                elementClassFriday[index].innerHTML = string;
+            } else elementClassFriday[index].innerHTML = array[index];
+        }
+    })
+}
+onClickButtonFriday(array);
