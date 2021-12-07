@@ -66,3 +66,13 @@ function onClickButtonHoliday() {
     
 }
 onClickButtonHoliday();
+
+// Exercício 04
+function createButtonFriday(string) {
+    const buttonFriday = document.createElement('button');
+    const buttonsContainer = document.getElementsByClassName('buttons-container');
+    buttonFriday.id = 'btn-friday';
+    buttonFriday.innerHTML = string;
+    buttonsContainer[0].appendChild(buttonFriday);
+}
+createButtonFriday('Sexta-Feira');
