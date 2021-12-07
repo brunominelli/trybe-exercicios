@@ -32,7 +32,18 @@ function calendarDezDays(array) {
             mounthDay.className = mounthDay.className + ' holiday';
         }
 
-        days.appendChild(mounthDay);
+        elementDays.appendChild(mounthDay);
     }
 }
 calendarDezDays(dezDaysList);
+
+// Exercício 02
+function buttonHoliday(string){
+    const buttonHoliday = document.createElement('button');
+    const buttonsContainer = document.getElementsByClassName('buttons-container');
+    buttonHoliday.id = 'btn-holiday';
+    buttonHoliday.innerHTML = string;
+    console.log(buttonsContainer[0].appendChild(buttonHoliday));
+}
+
+buttonHoliday('Feriados');
