@@ -43,7 +43,26 @@ function buttonHoliday(string){
     const buttonsContainer = document.getElementsByClassName('buttons-container');
     buttonHoliday.id = 'btn-holiday';
     buttonHoliday.innerHTML = string;
-    console.log(buttonsContainer[0].appendChild(buttonHoliday));
+    buttonsContainer[0].appendChild(buttonHoliday);
 }
-
 buttonHoliday('Feriados');
+
+// Exercício 03
+function onClickButtonHoliday() {
+    let buttonHoliday = document.getElementById('btn-holiday');
+    let elementClassHoliday = document.getElementsByClassName('holiday');
+    let backgroundColor = 'rgb(238,238,238)';
+    let color = 'white';
+    
+    buttonHoliday.addEventListener('click', function() {
+        for (let index = 0; index < elementClassHoliday.length; index += 1) {
+            if (elementClassHoliday[index].style.backgroundColor === color){
+                elementClassHoliday[index].style.backgroundColor = backgroundColor;
+            } else {
+                elementClassHoliday[index].style.backgroundColor = color;
+            }
+        }
+    });
+    
+}
+onClickButtonHoliday();
