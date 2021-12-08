@@ -96,6 +96,26 @@ function onClickButtonFriday(array) {
 onClickButtonFriday(array);
 
 // Exercício 06
+function zoomIn(){
+    let elementDays = document.getElementById('days');
+
+    elementDays.addEventListener('mouseover', function(event){
+        event.target.style.fontSize = '30px';
+        event.target.style.fontWeight = '300';
+    });
+}
+zoomIn();
+
+function zoomOut(){
+    let elementDays = document.getElementById('days');
+
+    elementDays.addEventListener('mouseout', function(event){
+        event.target.style.fontSize = '20px';
+        event.target.style.fontWeight = '200';
+    });
+}
+zoomOut();
+
 // Exercício 07
 // Exercício 08
 // Exercício 09
