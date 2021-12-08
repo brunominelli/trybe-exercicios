@@ -169,3 +169,32 @@ function addDayTaskColor() {
 addDayTaskColor();
 
 // Exercício Bônus
+function addNewTask() {
+    let elementTaskInput = document.getElementById('task-input');
+    let elementButtonAdd = document.getElementById('btn-add');
+    let elementTaskList = document.getElementsByClassName('task-list');
+
+    elementButtonAdd.addEventListener('click', function(){
+        if (elementTaskInput.value.length > 0) {
+            let elementList = document.createElement('li');
+            elementList.innerText = elementTaskInput.value;
+
+            elementTaskList[0].appendChild(elementList);
+            elementTaskInput.value = '';
+        } else alert('Error: Insira alguma tarefa.');
+    });
+
+    elementTaskInput.addEventListener('keyup', function(event){
+        if(event.key === 'Enter' && elementTaskInput.value.length > 0) {
+            let elementList = document.createElement('li');
+            elementList.innerHTML = elementTaskInput.value;
+
+            elementTaskList[0].appendChild(elementList);
+            elementTaskInput.value = '';
+        }
+    });
+    console.log(elementTaskInput);
+    console.log(elementButtonAdd);
+    console.log(elementTaskList);
+}
+addNewTask();
