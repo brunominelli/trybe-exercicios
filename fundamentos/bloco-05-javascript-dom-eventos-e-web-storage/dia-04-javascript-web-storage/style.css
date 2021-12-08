@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+}
+/*Cabeçalho*/
+#header {
+    background-color: #000;
+    color: #fff;
+    margin: auto;
+    padding: 75px;
+    text-align: center;
+}
+
+.title {
+    text-align: center;
+    padding: 15px;
+}
+
+.nav-header {
+    padding: 25px;
+    display: inline;
+}
+
+.nav-header ul {
+    text-align: center;
+}
+
+.nav-header ul li {
+    display: inline-block;
+    margin: 2px;
+    padding: 10px;
+    text-align: center;
+}
+
+.btn {
+    padding: 80px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #000;
+    transition: 0.25s;
+}
+
+/*Conteúdo*/
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.article {
+    margin: 50px;
+    padding: 50px;
+    box-shadow: 10px 10px 10px 10px #aaa;
+}
+
+.article-title {
+    text-align: center;
+    padding: 5px;
+}
+
+p {
+    text-indent: 50px;
+}
+/*Rodapé*/
+#footer {
+    background-color: #000;
+    color: #fff;
+    padding: 75px;
+    text-align: center;
+}
