@@ -117,6 +117,15 @@ function zoomOut(){
 zoomOut();
 
 // Exercício 07
+function addTask(string) {
+    const elementMyTasks = document.getElementsByClassName('my-tasks');
+    const elementTask = document.createElement('span');
+
+    elementTask.innerHTML = string;
+    elementMyTasks[0].appendChild(elementTask);
+}
+addTask('Cozinhar');
+
 // Exercício 08
 // Exercício 09
 // Exercício 10
