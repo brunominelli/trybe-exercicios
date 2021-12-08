@@ -127,6 +127,16 @@ function addTask(string) {
 addTask('Cozinhar');
 
 // Exercício 08
+function addSubtitle(string) {
+    const elementMyTasks = document.getElementsByClassName('my-tasks');
+    const elementTasks = document.createElement('div');
+
+    elementTasks.className = 'task';
+    elementTasks.style.backgroundColor = string;
+    elementMyTasks[0].appendChild(elementTasks);
+}
+addSubtitle('purple');
+
 // Exercício 09
 // Exercício 10
 // Exercício Bônus
