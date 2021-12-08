@@ -28,7 +28,7 @@ function calendarDezDays(array) {
             mounthDay.className = mounthDay.className + ' friday';
         }
 
-        if (array[day] == 24 || array[day] == 25 || array[day] == 31){
+        if (array[day] == 24 || array[day] == 25 || array[day] == 31) {
             mounthDay.className = mounthDay.className + ' holiday';
         }
 
@@ -38,7 +38,7 @@ function calendarDezDays(array) {
 calendarDezDays(dezDaysList);
 
 // Exercício 02
-function buttonHoliday(string){
+function buttonHoliday(string) {
     const buttonHoliday = document.createElement('button');
     const buttonsContainer = document.getElementsByClassName('buttons-container');
     buttonHoliday.id = 'btn-holiday';
@@ -81,9 +81,6 @@ function onClickButtonFriday(array) {
     let buttonFriday = document.getElementById('btn-friday');
     let elementClassFriday = document.getElementsByClassName('friday');
     let string = "'It's friday then!' - Mufasa";
-    console.log(buttonFriday);
-    console.log(string);
-    console.log(elementClassFriday);
 
     buttonFriday.addEventListener('click', function() {
         for (let index = 0; index < elementClassFriday.length; index += 1) {
@@ -96,20 +93,20 @@ function onClickButtonFriday(array) {
 onClickButtonFriday(array);
 
 // Exercício 06
-function zoomIn(){
+function zoomIn() {
     let elementDays = document.getElementById('days');
 
-    elementDays.addEventListener('mouseover', function(event){
+    elementDays.addEventListener('mouseover', function(event) {
         event.target.style.fontSize = '30px';
         event.target.style.fontWeight = '300';
     });
 }
 zoomIn();
 
-function zoomOut(){
+function zoomOut() {
     let elementDays = document.getElementById('days');
 
-    elementDays.addEventListener('mouseout', function(event){
+    elementDays.addEventListener('mouseout', function(event) {
         event.target.style.fontSize = '20px';
         event.target.style.fontWeight = '200';
     });
@@ -142,7 +139,7 @@ function addClassTaskSelected() {
     const elementTask = document.getElementsByClassName('task');
     const elementTaskSelected = document.getElementsByClassName('task selected');
 
-    elementTask[0].addEventListener('click', function(event){
+    elementTask[0].addEventListener('click', function(event) {
         if (elementTaskSelected.length === 0) {
             event.target.className = 'task selected';
         } else event.target.className = 'task';
@@ -157,11 +154,11 @@ function addDayTaskColor() {
     const elementTask = document.getElementsByClassName('task');
     const elementTaskColor = elementTask[0].style.backgroundColor;
 
-    elementDays.addEventListener('click', function(event){
+    elementDays.addEventListener('click', function(event) {
         let eventColor = event.target.style.color;
-        if(elementTask.length > 0 && elementTaskColor !== eventColor){
+        if (elementTask.length > 0 && elementTaskColor !== eventColor) {
             event.target.style.color = elementTaskColor;
-        } else if (eventColor === elementTaskColor && elementTaskSelected !== 0){
+        } else if (eventColor === elementTaskColor && elementTaskSelected !== 0) {
             event.target.style.color = 'rgb(119,119,119)';
         }
     });
@@ -174,7 +171,7 @@ function addNewTask() {
     let elementButtonAdd = document.getElementById('btn-add');
     let elementTaskList = document.getElementsByClassName('task-list');
 
-    elementButtonAdd.addEventListener('click', function(){
+    elementButtonAdd.addEventListener('click', function() {
         if (elementTaskInput.value.length > 0) {
             let elementList = document.createElement('li');
             elementList.innerText = elementTaskInput.value;
@@ -184,8 +181,8 @@ function addNewTask() {
         } else alert('Error: Insira alguma tarefa.');
     });
 
-    elementTaskInput.addEventListener('keyup', function(event){
-        if(event.key === 'Enter' && elementTaskInput.value.length > 0) {
+    elementTaskInput.addEventListener('keyup', function(event) {
+        if (event.key === 'Enter' && elementTaskInput.value.length > 0) {
             let elementList = document.createElement('li');
             elementList.innerHTML = elementTaskInput.value;
 
@@ -193,8 +190,5 @@ function addNewTask() {
             elementTaskInput.value = '';
         }
     });
-    console.log(elementTaskInput);
-    console.log(elementButtonAdd);
-    console.log(elementTaskList);
 }
 addNewTask();
