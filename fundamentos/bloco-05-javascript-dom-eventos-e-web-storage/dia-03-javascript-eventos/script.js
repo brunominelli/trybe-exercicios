@@ -139,8 +139,8 @@ addSubtitle('purple');
 
 // Exercício 09
 function addClassTaskSelected() {
-    let elementTask = document.getElementsByClassName('task');
-    let elementTaskSelected = document.getElementsByClassName('task selected');
+    const elementTask = document.getElementsByClassName('task');
+    const elementTaskSelected = document.getElementsByClassName('task selected');
 
     elementTask[0].addEventListener('click', function(event){
         if (elementTaskSelected.length === 0) {
@@ -151,4 +151,21 @@ function addClassTaskSelected() {
 addClassTaskSelected();
 
 // Exercício 10
+function addDayTaskColor() {
+    const elementDays = document.getElementById('days');
+    const elementTaskSelected = document.getElementsByClassName('task selected');
+    const elementTask = document.getElementsByClassName('task');
+    const elementTaskColor = elementTask[0].style.backgroundColor;
+
+    elementDays.addEventListener('click', function(event){
+        let eventColor = event.target.style.color;
+        if(elementTask.length > 0 && elementTaskColor !== eventColor){
+            event.target.style.color = elementTaskColor;
+        } else if (eventColor === elementTaskColor && elementTaskSelected !== 0){
+            event.target.style.color = 'rgb(119,119,119)';
+        }
+    });
+}
+addDayTaskColor();
+
 // Exercício Bônus
