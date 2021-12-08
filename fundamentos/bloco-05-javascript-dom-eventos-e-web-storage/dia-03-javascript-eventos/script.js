@@ -138,5 +138,17 @@ function addSubtitle(string) {
 addSubtitle('purple');
 
 // Exercício 09
+function addClassTaskSelected() {
+    let elementTask = document.getElementsByClassName('task');
+    let elementTaskSelected = document.getElementsByClassName('task selected');
+
+    elementTask[0].addEventListener('click', function(event){
+        if (elementTaskSelected.length === 0) {
+            event.target.className = 'task selected';
+        } else event.target.className = 'task';
+    });
+}
+addClassTaskSelected();
+
 // Exercício 10
 // Exercício Bônus
