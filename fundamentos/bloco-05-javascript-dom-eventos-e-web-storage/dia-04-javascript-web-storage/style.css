@@ -15,6 +15,7 @@
 .title {
     text-align: center;
     padding: 15px;
+    font-size: 50px;
 }
 
 .nav-header {
@@ -66,6 +67,7 @@
 
 p {
     text-indent: 50px;
+    font-size: 20px;
 }
 /*Rodapé*/
 #footer {
