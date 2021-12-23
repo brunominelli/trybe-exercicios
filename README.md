@@ -42,8 +42,8 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [X] 5-3: _JavaScript - Eventos_
 - [X] 5-4: _JavaScript - Web Storage_
 - [X] 5-5: _[Projeto - Meme Generator](https://obrunominelli.github.io/projetos/meme-generator/)_
-- [X] 5-6: _[Projeto - Arte com Pixels](https://obrunominelli.github.io/projetos/pixels-art/)_
-- [X] 5-7: _[Projeto - Lista de Tarefas](https://obrunominelli.github.io/projetos/todo-list/)_
+- [X] 5-6: _[Projeto - Arte com Pixels](https://obrunominelli.github.io/projetos/pixel-art/)_
+- [X] 5-7: _[Projeto - Lista de Tarefas](https://obrunominelli.github.io/projetos/to-do-list/)_
 - [X] 5-7: _[Projeto - Adivinhe a Cor](https://obrunominelli.github.io/projetos/color-guess/)_
 - [X] 5-7: _[Projeto - Carta Misteriosa](https://obrunominelli.github.io/projetos/mistery-letter/)_
 
