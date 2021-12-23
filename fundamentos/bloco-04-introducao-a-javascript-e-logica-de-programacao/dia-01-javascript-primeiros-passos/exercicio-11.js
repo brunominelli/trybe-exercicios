@@ -1,4 +1,4 @@
-let salarioBruto = 3000;
+let salarioBruto = 4680;
 let salarioLiquido = 0;
 let aliquotaINSS = 0;
 let aliquotaIR = 0;
