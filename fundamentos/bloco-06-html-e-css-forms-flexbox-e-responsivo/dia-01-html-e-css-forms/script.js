@@ -1,67 +1,41 @@
-const elementSelect = document.getElementById('estado');
-const arrayEstados = ['Acre',
-                     'Alagoas',
-                     'Amapá',
-                     'Amazonas',
-                     'Bahia',
-                     'Ceará',
-                     'Distrito Federal',
-                     'Espírito Santo',
-                     'Goiás',
-                     'Maranhão',
-                     'Mato Grosso',
-                     'Mato Grosso do Sul',
-                     'Minas Gerais',
-                     'Pará',
-                     'Paraíba',
-                     'Paraná',
-                     'Pernambuco',
-                     'Piauí',
-                     'Rio de Janeiro',
-                     'Rio Grande do Norte',
-                     'Rio Grande do Sul',
-                     'Rondônia',
-                     'Roraima',
-                     'Santa Catarina',
-                     'São Paulo',
-                     'Sergipe',
-                     'Tocantins'
-];
-
 const elementInitialDate = document.getElementById('data-inicio');
+const elementSubmitButton = document.getElementById('botao-enviar');
 
 /* Função: setElementOption
 -- Iunclui todos os estados do Brasil na tag Select */
-function setElementOption () {
-    for (let index = 0; index < arrayEstados.length; index += 1) {
+function setStates() {
+    const elementState = document.getElementById('state');
+    const arrayStates = ['AC', 'AL', 'AM', 'AP', 'BA', 'CE', 'DF', 'ES', 'GO', 'MA', 'MG', 'MS', 'MT', 'PA', 'PB', 'PE', 'PI', 'PR', 'RJ', 'RN', 'RO', 'RR', 'RS', 'SC', 'SE', 'SP', 'TO'];
+
+    for (let index = 0; index < arrayStates.length; index += 1) {
         const elementOption = document.createElement('option');
-        elementOption.innerText = arrayEstados[index];
-        elementOption.value = arrayEstados[index].toLowerCase();
-        elementSelect.appendChild(elementOption);
+        elementOption.innerText = arrayStates[index];
+        elementOption.value = arrayStates[index].toLowerCase();
+        elementState.appendChild(elementOption);
     }
 }
-setElementOption();
 
-function checkDateFormat() {
-    const splitDate = elementInitialDate.value.split('/');
-    const dia = parseInt(splitDate[0]);
-    const mes = parseInt(splitDate[1]);
-    const ano = parseInt(splitDate[2]);
-    let message = '';
+function clearForm() {
+    const formElements = document.getElementsByTagName('input');
+    const elementTextarea = document.getElementsByTagName('textarea');
 
-    if (dia < 0 || dia > 31) {
-        message = 'Erro: Data inválida! Dia incorreto.';
-        alert(message);
-    }
-
-    if (mes < 0 || mes > 12) {
-        message = 'Erro: Data inválida! Mês incorreto.';
-        alert(message);
-    }
-
-    if (ano < 0) {
-        message = 'Erro: Data inválida! Ano incorreto.';
-        alert(message);
+    for (let index = 0; index < formElements.length; index += 1) {
+        let data = formElements[index];
+        data.value = '';
+        elementTextarea.value = '';
     }
 }
-checkDateFormat();
+
+function checkForm(event) {
+    event.preventDefault();
+}
+
+window.onload = () => {
+    setStates();
+    
+    const buttonClear = document.getElementById('button-clear');
+    buttonClear.addEventListener('click', clearForm);
+
+    const buttonSubmit = document.getElementById('button-submit');
+    buttonSubmit.addEventListener('click', checkForm);
+}

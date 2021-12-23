@@ -8,59 +8,70 @@
     <title>Formulário de Currículo</title>
 </head>
 <body>
-    <form action="#" method="get" id="curriculo">
-        <fieldset id="dados-pessoais">
-            <legend>Dados Pessoais</legend>
-            <label for="nome">
-                <p>Nome</p>
-                <input type="text" name="nome" id="nome" maxlength="40" required />
-            </label>
-            <label for="email">
-                <p>E-Mail</p>
-                <input type="email" name="email" id="email" maxlength="50" required />
-            </label>
-            <label for="cpf">
-                <p>CPF</p>
-                <input type="text" name="cpf" id="cpf" maxlength="11" required />
-            </label>
-            <label for="endereco">
-                <p>Endereço</p>
-                <input type="text" name="endereco" id="endereco" maxlength="200" required />
-            </label>
-            <label for="cidade">
-                <p>Cidade</p>
-                <input type="text" name="cidade" id="cidade" maxlength="28" required />
-            </label>
-            <label for="estado">
-                <p>Estado</p>
-                <select name="estado" id="estado" required></select>
-            </label>
-            <label for="tipo">
-                <p>Tipo</p>
-                Casa <input type="radio" name="tipo" id="tipo" checked required>
-                Apartamento <input type="radio" name="tipo" id="tipo" checked required>
-            </label>
-        </fieldset>
-        <fieldset id="ultimo-emprego">
-            <legend>Informações do Último Emprego</legend>
-            <label for="resumo-curriculo">
-                <p>Resumo do Currículo:</p>
-                <textarea name="resumo-curriculo" id="resumo-curriculo" cols="30" rows="10" maxlength="1000" required></textarea>
-            </label>
-            <label for="cargo">
-                <p>Cargo</p>
-                <input type="text" name="cargo" id="cargo" maxlength="40" required />
-            </label>
-            <label for="cargo-descricao">
-                <p>Descrição</p>
-                <input type="text" name="cargo-descricao" id="cargo-descricao" maxlength="500" required />
-            </label>
-            <label for="data-inicio">
-                <p>Data de Início</p>
-                <input type="text" name="data-inicio" id="data-inicio" placeholder="dd/mm/aaaa" value="18/09/2021" required />
-            </label>
-        </fieldset>
-    </form>
+    <header>
+        <h1>Formulário de Currículo</h1>
+    </header>
+    <main class="container">
+        <form action="#" method="get" id="curriculo">
+            <fieldset id="dados-pessoais">
+                <legend>Dados Pessoais</legend>
+                <label for="name">
+                    <p>Nome</p>
+                    <input type="text" name="name" id="name" maxlength="40" required />
+                </label>
+                <label for="email">
+                    <p>E-Mail</p>
+                    <input type="email" name="email" id="email" maxlength="50" required />
+                </label>
+                <label for="cpf">
+                    <p>CPF</p>
+                    <input type="text" name="cpf" id="cpf" maxlength="11" required />
+                </label>
+                <label for="address">
+                    <p>Endereço</p>
+                    <input type="text" name="address" id="address" maxlength="200" required />
+                </label>
+                <label for="city">
+                    <p>Cidade</p>
+                    <input type="text" name="city" id="city" maxlength="28" required />
+                </label>
+                <label for="state">
+                    <p>Estado</p>
+                    <select name="state" id="state" required></select>
+                </label>
+                <label for="houseType">
+                    <p>Residência</p>
+                    <input type="radio" name="houseType" id="house" checked required />
+                    <span>Casa</span> <br />
+                    <input type="radio" name="houseType" id="apartment" required />
+                    <span>Apartamento</span>
+                </label>
+            </fieldset>
+            <fieldset id="ultimo-emprego">
+                <legend>Informações do Último Emprego</legend>
+                <label for="resume">
+                    <p>Resumo do Currículo:</p>
+                    <textarea name="resume" id="resume" cols="20" rows="2" maxlength="1000" required></textarea>
+                </label>
+                <label for="role">
+                    <p>Cargo</p>
+                    <input type="text" name="role" id="role" maxlength="40" required />
+                </label>
+                <label for="role-description">
+                    <p>Descrição</p>
+                    <input type="text" name="role-description" id="role-description" maxlength="500" required />
+                </label>
+                <label for="start-date">
+                    <p>Data de Início</p>
+                    <input type="text" name="start-date" id="start-date" placeholder="dd/mm/aaaa" required />
+                </label>
+            </fieldset>
+            <nav>
+                <button type="submit" id="button-submit">Enviar</button>
+                <button type="button" id="button-clear">Limpar</button>
+            </nav>
+        </form>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>
