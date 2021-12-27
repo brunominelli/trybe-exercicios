@@ -12,6 +12,7 @@
       <h1>Formulário de Currículo</h1>
     </header>
     <main class="container">
+      <div id="message">Todos os campos são obrigatórios!</div>
       <form action="#" method="get" id="curriculo">
         <fieldset id="dados-pessoais">
           <legend>Dados Pessoais</legend>
@@ -41,9 +42,9 @@
           </label>
           <label for="houseType">
             <p>Residência</p>
-            <input type="radio" name="residência" id="house" checked required />
+            <input type="radio" name="residência" id="house" value="casa" checked />
             <span>Casa</span>
-            <input type="radio" name="residência" id="apartment" required />
+            <input type="radio" name="residência" id="apartment" value="apartamento"/>
             <span>Apartamento</span>
           </label>
         </fieldset>

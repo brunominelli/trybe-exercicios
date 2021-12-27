@@ -36,3 +36,14 @@ nav {
     width: 80%;
     margin: auto;
 }
+
+#message {
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: left;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    text-transform: uppercase;
+}

@@ -1,5 +1,6 @@
 let message = '';
 let fieldsName = [];
+
 /* Função: setElementOption
 -- Iunclui todos os estados do Brasil na tag Select */
 function setStates() {
@@ -14,6 +15,8 @@ function setStates() {
   }
 }
 
+/* Função: validateState
+-- Verifica se a pessoa usuário preencheu o estado no formulário */
 function validadteState() {
     const elementState = document.getElementById('state');
     if (elementState.value === '') {
@@ -91,11 +94,13 @@ function validateEmail() {
 function clearForm() {
   const formElements = document.getElementsByTagName('input');
   const elementTextarea = document.getElementsByTagName('textarea')[0];
+  const elementDivMessage = document.getElementById('message');
 
   for (let index = 0; index < formElements.length; index += 1) {
     let data = formElements[index];
     data.value = '';
     elementTextarea.value = '';
+    elementDivMessage.innerText = 'Todos os campos são obrigatórios';
   }
 }
 
@@ -108,16 +113,44 @@ function checkForm(event) {
   validateEmail();
   validateDate();
 
-  if (fieldsName.length !== 0) {
-      message = `Preencha todos os campos obrigatórios! ${fieldsName}`; 
-      alert(message);
-  }
+  const elementDivMessage = document.getElementById('message');
+  const elementsInput = document.getElementsByTagName('input');
+  const elementsSelect = document.getElementsByTagName('select')[0];
+  const elementsTextarea = document.getElementsByTagName('textarea')[0];
+  const home = document.getElementsByName('residência');
+  let elementHome = '';
+  if (home[0].checked) {
+    elementHome = home[0].value.toUpperCase();
+  } else elementHome = home[1].value.toUpperCase();
 
+  console.log(elementsInput);
+  console.log(elementsSelect);
+  console.log(elementsTextarea);
+
+  if (fieldsName.length !== 0) {
+      message = `Preencha todos os campos obrigatórios: \n\n ${fieldsName}`; 
+      elementDivMessage.innerText = message;
+  } else {
+      elementDivMessage.innerText = `
+      ${elementsInput[0].name.toUpperCase()}: ${elementsInput[0].value.toUpperCase()}
+      ${elementsInput[1].name.toUpperCase()}: ${elementsInput[1].value.toUpperCase()}
+      ${elementsInput[2].name.toUpperCase()}: ${elementsInput[2].value.toUpperCase()}
+      ${elementsInput[3].name.toUpperCase()}: ${elementsInput[3].value.toUpperCase()}
+      ${elementsInput[4].name.toUpperCase()}: ${elementsInput[4].value.toUpperCase()}
+      ${elementsSelect.name.toUpperCase()}: ${elementsSelect.value.toUpperCase()}
+      ${elementsInput[5].name.toUpperCase()}: ${elementHome}
+      ${elementsInput[7].name.toUpperCase()}: ${elementsInput[7].value.toUpperCase()}
+      ${elementsInput[8].name.toUpperCase()}: ${elementsInput[8].value.toUpperCase()}
+      ${elementsInput[9].name.toUpperCase()}: ${elementsInput[9].value.toUpperCase()}
+      ${elementsTextarea.name.toUpperCase()}: ${elementsTextarea.value.toUpperCase()}
+      `;
+  }
+  console.log(elementDivMessage.innerText);
   message = '';
   fieldsName = [];
 }
 
-/* Execução do script apó o carregamento da página. */
+/* Execução do script após o carregamento da página. */
 window.onload = () => {
   setStates();
   
