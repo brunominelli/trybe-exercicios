@@ -12,11 +12,50 @@ function setStates() {
   }
 }
 
+
+function validateFormFields() {
+  const elementsInput = document.getElementsByTagName('input');
+  const elementsTextarea = document.getElementsByTagName('textarea')[0];
+  const elementsLabel = document.getElementsByTagName('label');
+  let color = 'black';
+  let message = 'Preencha todos os campos obrigatórios!';
+
+  for (let index = 0; index < elementsInput.length; index += 1) {
+    // console.log(elementsInput[index]);
+    // console.log(elementsLabel[10]);
+
+    if (elementsInput[index].type === 'text') {
+      if (elementsInput[index].value === '') {
+        color = 'red';
+        elementsInput[index].style.borderColor = color;
+      } else if (elementsInput[index].value !== '') {
+        elementsInput[index].style.borderColor = color;
+      }
+    }
+
+    if (elementsInput[index].type === 'email') {
+      color = 'red';
+      elementsInput[index].style.borderColor = color;
+    } else if (elementsInput[index].value !== '') {
+      elementsInput[index].style.borderColor = color;
+    }
+
+    if (elementsTextarea.value === '') {
+        color = 'red';
+        elementsTextarea.style.borderColor = color;
+    } else if (elementsTextarea.value !== '') {
+        elementsTextarea.style.borderColor = color;
+    }
+  }
+  
+  return alert(message);
+}
+
 /* Função: clearForm
 -- Limpa todos os campos do formulário */
 function clearForm() {
   const formElements = document.getElementsByTagName('input');
-  const elementTextarea = document.getElementsByTagName('textarea');
+  const elementTextarea = document.getElementsByTagName('textarea')[0];
 
   for (let index = 0; index < formElements.length; index += 1) {
     let data = formElements[index];
@@ -29,6 +68,8 @@ function clearForm() {
 -- Impede o comportamento padrão do formulário por meio do botão de submissão do formulário */
 function checkForm(event) {
   event.preventDefault();
+  validateFormFields(event);
+
 }
 
 /* Execução do script apó o carregamento da página. */

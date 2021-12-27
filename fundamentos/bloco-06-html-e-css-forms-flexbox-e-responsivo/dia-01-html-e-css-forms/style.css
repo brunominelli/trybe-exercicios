@@ -22,6 +22,10 @@ select {
     width: 100%;
 }
 
+input[type=radio] {
+    display: inline;
+}
+
 header,
 nav {
     padding: 20px;
