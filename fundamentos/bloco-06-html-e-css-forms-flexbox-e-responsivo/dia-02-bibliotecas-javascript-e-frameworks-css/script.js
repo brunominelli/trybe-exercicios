@@ -1,3 +1,11 @@
+import JustValidate from 'just-validate-master';
+
+const validation = new JustValidate('#form');
+
+validation.addField('#name', [{ 
+  rule: 'required',
+}]);
+
 let message = '';
 let fieldsName = [];
 
@@ -54,7 +62,7 @@ function validateDate() {
 
 /* Função: validateInputFormFields
 -- Verifica se os campos de texto do formulário foram preenchidos pela pessoa usuária */
-function validateInputFormFields() {
+/* function validateInputFormFields() {
   const elementsInput = document.getElementsByTagName('input');
   const elementsTextarea = document.getElementsByTagName('textarea')[0];
   let arrayInputText = [];
@@ -77,7 +85,7 @@ function validateInputFormFields() {
   } else {
     elementsTextarea.style.borderColor = 'green';
   }
-}
+} */
 
 /* Função: validateFormFields
 -- Verifica se os campos do formulário foram preenchidos */
