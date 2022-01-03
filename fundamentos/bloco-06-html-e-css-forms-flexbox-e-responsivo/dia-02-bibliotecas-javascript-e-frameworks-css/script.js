@@ -95,11 +95,15 @@ function clearForm() {
   const formElements = document.getElementsByTagName('input');
   const elementTextarea = document.getElementsByTagName('textarea')[0];
   const elementDivMessage = document.getElementById('message');
+  const elementSelectState = document.getElementById('state');
 
   for (let index = 0; index < formElements.length; index += 1) {
     let data = formElements[index];
     data.value = '';
+    data.style.borderColor = '';
     elementTextarea.value = '';
+    elementTextarea.style.borderColor = '';
+    elementSelectState.style.borderColor = '';
     elementDivMessage.innerText = 'Todos os campos são obrigatórios';
   }
 }
@@ -117,7 +121,7 @@ function checkForm(event) {
   const elementsInput = document.getElementsByTagName('input');
   const elementsSelect = document.getElementsByTagName('select')[0];
   const elementsTextarea = document.getElementsByTagName('textarea')[0];
-  const home = document.getElementsByName('residência');
+  const home = document.getElementsByName('residencia');
   let elementHome = '';
   if (home[0].checked) {
     elementHome = home[0].value.toUpperCase();
