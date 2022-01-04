@@ -5,8 +5,9 @@ let fieldsName = [];
 
 /* Validação do Formulário */
 validation.init('#form');
-startDate.DatePickerX.init();
-console.log(validation.init('#form'));
+startDate.DatePickerX.init({
+  format: "dd/mm/yyyy",
+});
 
 /* Função: setElementOption
 -- Iunclui todos os estados do Brasil na tag Select */
@@ -19,6 +20,31 @@ function setStates() {
     elementOption.innerText = arrayStates[index];
     elementOption.value = arrayStates[index].toLowerCase();
     elementState.appendChild(elementOption);
+  }
+}
+
+/* Função: validateState
+-- Verifica se a pessoa usuário preencheu o estado no formulário */
+function validadteState() {
+    const elementState = document.getElementById('state');
+    if (elementState.value === '') {
+      fieldsName.push(elementState.name.toUpperCase());
+    }
+}
+
+/* Função: validateInputFormFields
+-- Verifica se os campos de texto do formulário foram preenchidos pela pessoa usuária */
+ function validateInputFormFields() {
+  const elementsInput = document.getElementsByTagName('input');
+  const elementsTextarea = document.getElementsByTagName('textarea')[0];
+
+  for (let index = 0; index < elementsInput.length; index += 1) {
+    if (elementsInput[index].type === 'text' && elementsInput[index].value === '') fieldsName.push(elementsInput[index].name.toUpperCase());
+    if (elementsInput[index].type === 'email' && elementsInput[index].value === '') fieldsName.push(elementsInput[index].name.toUpperCase());
+  }
+
+  if (elementsTextarea.value === '') {
+    fieldsName.push(elementsTextarea.name.toUpperCase());
   }
 }
 
@@ -37,29 +63,22 @@ function clearForm() {
     elementTextarea.value = '';
     elementTextarea.style.borderColor = '';
     elementSelectState.style.borderColor = '';
-    elementDivMessage.innerText = 'Todos os campos são obrigatórios';
+    elementDivMessage.innerText = 'Todos os campos são obrigatórios!';
   }
 }
 
-/* Função: checkForm
--- Impede o comportamento padrão do formulário por meio do botão de submissão do formulário */
-function checkForm(event) {
-  event.preventDefault();
-
+/* Função: printForm()
+-- Imprime em uma DIV o resultado do formulário preenchido pela pessoa usuária */
+function printForm() {
   const elementDivMessage = document.getElementById('message');
   const elementsInput = document.getElementsByTagName('input');
   const elementsSelect = document.getElementsByTagName('select')[0];
   const elementsTextarea = document.getElementsByTagName('textarea')[0];
   const home = document.getElementsByName('residencia');
   let elementHome = '';
-
   if (home[0].checked) {
     elementHome = home[0].value.toUpperCase();
   } else elementHome = home[1].value.toUpperCase();
-
-  console.log(elementsInput);
-  console.log(elementsSelect);
-  console.log(elementsTextarea);
 
   if (fieldsName.length !== 0) {
       message = `Preencha todos os campos obrigatórios: \n\n ${fieldsName}`; 
@@ -79,15 +98,24 @@ function checkForm(event) {
       ${elementsTextarea.name.toUpperCase()}: ${elementsTextarea.value.toUpperCase()}
       `;
   }
-  console.log(elementDivMessage.innerText);
   message = '';
   fieldsName = [];
+}
+
+/* Função: checkForm
+-- Impede o comportamento padrão do formulário por meio do botão de submissão do formulário */
+function checkForm(event) {
+  event.preventDefault();
+  validateInputFormFields();
+  validadteState();
+  console.log(fieldsName);
+  printForm();
 }
 
 /* Execução do script após o carregamento da página. */
 window.onload = () => {
   setStates();
-  
+
   const buttonClear = document.getElementById('button-clear');
   buttonClear.addEventListener('click', clearForm);
 
