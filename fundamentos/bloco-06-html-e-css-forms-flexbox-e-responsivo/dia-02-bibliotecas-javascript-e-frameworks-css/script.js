@@ -1,13 +1,12 @@
-import JustValidate from 'just-validate-master';
-
-const validation = new JustValidate('#form');
-
-validation.addField('#name', [{ 
-  rule: 'required',
-}]);
-
+/* Constantes e Variáveis */
+const startDate = document.getElementById('start-date');
 let message = '';
 let fieldsName = [];
+
+/* Validação do Formulário */
+validation.init('#form');
+startDate.DatePickerX.init();
+console.log(validation.init('#form'));
 
 /* Função: setElementOption
 -- Iunclui todos os estados do Brasil na tag Select */
@@ -21,80 +20,6 @@ function setStates() {
     elementOption.value = arrayStates[index].toLowerCase();
     elementState.appendChild(elementOption);
   }
-}
-
-/* Função: validateState
--- Verifica se a pessoa usuário preencheu o estado no formulário */
-function validadteState() {
-    const elementState = document.getElementById('state');
-    if (elementState.value === '') {
-        fieldsName.push(elementState.name.toUpperCase());
-        elementState.style.borderColor = 'red'
-    } else elementState.style.borderColor = 'green';
-}
-
-/* Função: validateDate
--- Verifica se a data inserida pela pessoa usuária está correta */
-function validateDate() {
-  const elementStartDate = document.getElementById('start-date');
-  const arrayDate = elementStartDate.value.split('/');
-  const day = parseInt(arrayDate[0]);
-  const month = parseInt(arrayDate[1]);
-  const year = parseInt(arrayDate[2]);
-  let color = 'green';
-
-  if (day <= 0 || day > 31){
-    alert('Valor inválido: Dia incorreto!');
-    color = 'red';
-    elementStartDate.style.borderColor = color;
-  }
-
-  if (month <= 0 || month > 12) {
-    alert('Valor inválido: Mês incorreto!');
-    color = 'red';
-    elementStartDate.style.borderColor = color;
-  }
-
-  if (year < 0) {
-    alert('Valor inválido: Ano incorreto!');
-  }
-}
-
-/* Função: validateInputFormFields
--- Verifica se os campos de texto do formulário foram preenchidos pela pessoa usuária */
-/* function validateInputFormFields() {
-  const elementsInput = document.getElementsByTagName('input');
-  const elementsTextarea = document.getElementsByTagName('textarea')[0];
-  let arrayInputText = [];
-  for (let index = 0; index < elementsInput.length; index += 1) {
-    if (elementsInput[index].type === 'text') {
-      arrayInputText.push(elementsInput[index]);
-    }
-  }
-
-  for (let index = 0; index < arrayInputText.length; index += 1) {
-    if (arrayInputText[index].value === '') {
-      fieldsName.push(arrayInputText[index].name.toUpperCase());
-      arrayInputText[index].style.borderColor = 'red';
-    } else arrayInputText[index].style.borderColor = 'green';
-  }
-
-  if (elementsTextarea.value === '') {
-    fieldsName.push(elementsTextarea.name.toUpperCase());
-    elementsTextarea.style.borderColor = 'red';
-  } else {
-    elementsTextarea.style.borderColor = 'green';
-  }
-} */
-
-/* Função: validateFormFields
--- Verifica se os campos do formulário foram preenchidos */
-function validateEmail() {
-  const elementInputEmail = document.getElementById('email');
-  if (elementInputEmail.value === '' || (elementInputEmail.value.indexOf('@') === -1)) {
-    fieldsName.push(elementInputEmail.name.toUpperCase());
-    elementInputEmail.style.borderColor = 'red';
-  } else elementInputEmail.style.borderColor = 'green';
 }
 
 /* Função: clearForm
@@ -120,10 +45,6 @@ function clearForm() {
 -- Impede o comportamento padrão do formulário por meio do botão de submissão do formulário */
 function checkForm(event) {
   event.preventDefault();
-  validateInputFormFields();
-  validadteState();
-  validateEmail();
-  validateDate();
 
   const elementDivMessage = document.getElementById('message');
   const elementsInput = document.getElementsByTagName('input');
@@ -131,6 +52,7 @@ function checkForm(event) {
   const elementsTextarea = document.getElementsByTagName('textarea')[0];
   const home = document.getElementsByName('residencia');
   let elementHome = '';
+
   if (home[0].checked) {
     elementHome = home[0].value.toUpperCase();
   } else elementHome = home[1].value.toUpperCase();
