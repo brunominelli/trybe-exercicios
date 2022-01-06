@@ -91,4 +91,10 @@ body {
       display: block;
     }
   }
-  
+
+  /* Exercício 04 */
+  @media (max-width: 500px) {
+    p.trick {
+      color: #0255c2;
+    }
+  }  
