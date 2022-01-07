@@ -85,8 +85,11 @@ html {
     }
     
     .aside-one {
+        width: 100%;
+        margin: auto;
         order: 1;
         margin: 1em;
+        justify-content: space-evenly;
     }
 
     .aside-two {
@@ -94,7 +97,17 @@ html {
         margin: 1em;
     }
 
+    .left {
+        float: left;
+    }
+
+    .right {
+        float: right;
+    }
+
     .summary ul {
+        width: 80%;
+        margin: auto;
         list-style: none;
         line-height: 2em;
         padding: 0;
@@ -154,26 +167,38 @@ html {
         margin: auto;
         background-color: white;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
         text-align: center;
     }
 
     .summary ul {
+        width: 60%;
+        margin: auto;
         list-style: none;
         line-height: 2em;
         padding: 0;
     }
 
     .aside-one {
+        width: 100%;
         order: 1;
         margin: 1em;
+        justify-content: space-evenly;
     }
 
     .aside-two {
         order: 0;
         margin: 1em;
+    }
+
+    .left {
+        float: left;
+    }
+
+    .right {
+        float: right;
     }
 
     .main-content {
@@ -194,5 +219,94 @@ html {
     body {
         background-color: blue;
         font-size: 1.25em;
+    }
+
+    .container {
+        background-color: lightgray;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header, footer {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .footer {
+        padding: 1em;
+        text-align: justify;
+    }
+
+    .footer p, .footer h3 {
+        margin: .25em;
+    }
+
+    .nav-header {
+        width: 100%;
+        background-color: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding: 1em;
+    }
+
+    .summary {
+        width: 90%;
+        margin: auto;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+    }
+
+    .summary ul {
+        width: 70%;
+        margin: auto;
+        list-style: none;
+        line-height: 2em;
+        padding: 0;
+    }
+
+    .aside-one {
+        order: 1;
+        margin: 1em;
+        justify-content: space-evenly;
+    }
+
+    .aside-two {
+        width: 100%;
+        order: 0;
+        margin: 1em;
+        justify-content: space-evenly;
+    }
+
+    .left {
+        float: left;
+    }
+
+    .right {
+        float: right;
+    }
+
+    .left, .right {
+        margin: 0 5em;
+    }
+
+    .main-content {
+        width: 90%;
+        margin: auto;
+        background-color: white;
+        padding: 4em;
+    }
+
+    .main-content p {
+        line-height: 2em;
+        padding-bottom: 1em;
+        text-indent: 3em;
     }
 }
