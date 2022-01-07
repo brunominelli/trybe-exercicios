@@ -21,7 +21,7 @@
   
   h1 {
     font-size: 1.75em;
-    margin: .75em;
+    margin-top: .75em;
   }
   
   h2 {
@@ -29,7 +29,7 @@
   }
   
   img {
-      max-width: 100%;
+    max-width: 100%;
   }
   
   main {
@@ -41,7 +41,7 @@
   }
   
   figure {
-      margin: 0;
+      margin: 1.75em;
   }
   
   figcaption {
