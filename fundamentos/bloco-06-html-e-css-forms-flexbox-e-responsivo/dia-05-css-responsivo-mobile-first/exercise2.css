@@ -31,3 +31,10 @@ html {
         font-size: 1.5em;
     }
 }
+
+@media screen and (min-width: 1200px) {
+    body {
+        background-color: blue;
+        font-size: 1.25em;
+    }
+}
