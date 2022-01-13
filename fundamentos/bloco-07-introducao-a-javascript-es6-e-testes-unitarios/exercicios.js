@@ -43,3 +43,15 @@ const longestWord = string => {
 console.log(longestWord('Antônio foi no banheiro e não sabemos o que aconteceu')); // retorna 'aconteceu' */
 
 /* Exercicio 05 - Arquivo HTML*/
+
+/* Exercício 06 */
+const arraySkills = ['HTML', 'CSS', 'JavaScript', 'NodeJS', 'Bootstrap'];
+function setSkills (string) {
+    const stringFunction = tryber => `Tryber ${tryber} aqui!`;
+    let result = `${stringFunction(string)} Minhas cinco principais habilidades são: \n`;
+    arraySkills.forEach((skill, index) => result = `${result} - ${skill} \n`);
+    result = `${result} \n #goTrybe`;
+    return result;
+}
+
+console.log(setSkills('Bruno'))
