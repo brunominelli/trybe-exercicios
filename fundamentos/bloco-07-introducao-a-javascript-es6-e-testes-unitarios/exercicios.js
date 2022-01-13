@@ -14,3 +14,20 @@ function testingScope(escopo) {
 testingScope(false);
 
 /* Exercício 02 */
+const oddsAndEvens = [13, 3, 4, 10, 7, 2];
+
+// Seu código aqui.
+let sortArray = (array) => {
+  for (let index = 0; index < array.length; index += 1) {
+    for (let index = 0; index < array.length; index += 1) {
+      if (array[index] > array[index + 1]) {
+        let aux = array[index];
+        array[index] = array[index + 1];
+        array[index + 1] = aux;
+      }
+    }
+  }
+  return array;
+};
+
+console.log(sortArray(oddsAndEvens)); // será necessário alterar essa linha 😉
