@@ -23,3 +23,21 @@ console.log(sortArray(oddsAndEvens)); // será necessário alterar essa linha �
 /* Exercicio 03 */
 const factorial = number  => number > 1 ? number * factorial(number - 1) : 1;
 console.log(factorial(5));
+
+/* Exercico 04 */
+const longestWord = string => {
+    let wordArray = string.split(' ');
+    let wordLength = 0;
+    let longestWord = '';
+
+    for (let word in wordArray) {
+        if (wordArray[word].length > wordLength) {
+            wordLength = word.length;
+            longestWord = wordArray[word];
+        }
+    }
+
+    return longestWord;
+}
+
+console.log(longestWord('Antônio foi no banheiro e não sabemos o que aconteceu')); // retorna 'aconteceu' */
