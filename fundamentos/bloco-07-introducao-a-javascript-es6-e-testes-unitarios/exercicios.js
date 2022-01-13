@@ -41,3 +41,5 @@ const longestWord = string => {
 }
 
 console.log(longestWord('Antônio foi no banheiro e não sabemos o que aconteceu')); // retorna 'aconteceu' */
+
+/* Exercicio 05 - Arquivo HTML*/
