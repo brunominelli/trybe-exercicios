@@ -27,7 +27,7 @@ let sortArray = (array) => {
       }
     }
   }
-  return array;
+  return `Os números ${array} se encontram ordenados de forma crescente!`;
 };
 
 console.log(sortArray(oddsAndEvens)); // será necessário alterar essa linha 😉
