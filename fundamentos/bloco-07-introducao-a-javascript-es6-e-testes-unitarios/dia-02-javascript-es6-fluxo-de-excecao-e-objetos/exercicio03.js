@@ -55,3 +55,9 @@ const lesson1 = {
   }
 
   console.log(getAllStudents(allLessons));
+
+  // Exercício 07
+  const getValueByNumber = (object, number) => Object.values(object)[number];
+  console.log(getValueByNumber(lesson1, 0));
+// Output: 'Matématica'
+
