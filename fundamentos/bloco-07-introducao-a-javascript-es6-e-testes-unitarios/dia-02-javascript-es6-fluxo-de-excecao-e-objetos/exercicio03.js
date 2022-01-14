@@ -74,3 +74,18 @@ const lesson1 = {
   console.log(isKeyValue(lesson1, 'turno', 'noite'));
   console.log(isKeyValue(lesson2, 'turno', 'noite'));
   console.log(isKeyValue(lesson3, 'turno', 'noite'));
+
+  /* BÔNUS */
+
+  // Exercício 01
+  const getAllStudentsInMathClass = (object) => {
+    let totalOfStudents = 0;
+    const array = Object.keys(object);
+    for (let index in array) {
+      if (object[array[index]].materia === 'Matemática'){
+        totalOfStudents += object[array[index]].numeroEstudantes;
+      }
+    }
+    return totalOfStudents;
+  }
+  console.log(getAllStudentsInMathClass(allLessons));
