@@ -27,3 +27,9 @@ const lesson1 = {
   console.log(listKeys(lesson1));
   console.log(listKeys(lesson2));
   console.log(listKeys(lesson3));
+
+  // Exercicio 03
+  const objectLenght = (object) => Object.keys(object).length;
+  console.log(objectLenght(lesson1));
+  console.log(objectLenght(lesson2));
+  console.log(objectLenght(lesson3));
