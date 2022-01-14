@@ -43,3 +43,15 @@ const lesson1 = {
   // Exercicio 05
   const allLessons = Object.assign({}, {lesson1, lesson2, lesson3});
   console.log(allLessons);
+
+  // Exercício 06
+  const getAllStudents = (object) => {
+    let totalOfStudents = 0;
+    const array = Object.keys(object);
+    for (let index in array) {
+        totalOfStudents += object[array[index]].numeroEstudantes;
+    }
+    return totalOfStudents;
+  }
+
+  console.log(getAllStudents(allLessons));
