@@ -39,3 +39,7 @@ const lesson1 = {
   console.log(listObjectValues(lesson1));
   console.log(listObjectValues(lesson2));
   console.log(listObjectValues(lesson3));
+
+  // Exercicio 05
+  const allLessons = Object.assign({}, {lesson1, lesson2, lesson3});
+  console.log(allLessons);
