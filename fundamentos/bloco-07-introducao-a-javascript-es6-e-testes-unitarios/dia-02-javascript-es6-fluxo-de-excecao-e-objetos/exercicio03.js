@@ -23,13 +23,19 @@ const lesson1 = {
   setKey(lesson2, 'turno', 'noite');
 
   // Exercício 02
-  const listKeys = (object) => Object.keys(object);
-  console.log(listKeys(lesson1));
-  console.log(listKeys(lesson2));
-  console.log(listKeys(lesson3));
+  const listObjectKeys = (object) => Object.keys(object);
+  console.log(listObjectKeys(lesson1));
+  console.log(listObjectKeys(lesson2));
+  console.log(listObjectKeys(lesson3));
 
   // Exercicio 03
   const objectLenght = (object) => Object.keys(object).length;
   console.log(objectLenght(lesson1));
   console.log(objectLenght(lesson2));
   console.log(objectLenght(lesson3));
+
+  // Exercício 04
+  const listObjectValues = (object) => Object.values(object);
+  console.log(listObjectValues(lesson1));
+  console.log(listObjectValues(lesson2));
+  console.log(listObjectValues(lesson3));
