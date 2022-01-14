@@ -89,3 +89,30 @@ const lesson1 = {
     return totalOfStudents;
   }
   console.log(getAllStudentsInMathClass(allLessons));
+
+  // Exercício 02
+  const getLessonsInfo = (object, name) => {
+      const arrayAllLessons = [];
+      let totalOfStudents = 0;
+      const array = Object.values(object);
+      for (let index in array) {
+          if (array[index].professor === name) {
+              arrayAllLessons.push(array[index].materia);
+              totalOfStudents += array[index].numeroEstudantes;
+          }
+      }
+      return { lessons: arrayAllLessons, students: totalOfStudents};
+  }
+
+  const createReport = (object, name) => {
+      const report = {};
+      report.professor = name;
+      Object.assign(report, getLessonsInfo(object, name));
+      return report;
+  }
+  console.log(createReport(allLessons, 'Maria Clara'))
+/* {
+  professor: 'Maria Clara',
+  aulas: [ 'Matemática', 'Matemática' ],
+  estudantes: 30
+} */
