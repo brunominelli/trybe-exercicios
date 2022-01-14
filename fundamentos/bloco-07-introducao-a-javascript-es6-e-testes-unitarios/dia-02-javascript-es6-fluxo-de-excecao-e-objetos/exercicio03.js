@@ -59,5 +59,18 @@ const lesson1 = {
   // Exercício 07
   const getValueByNumber = (object, number) => Object.values(object)[number];
   console.log(getValueByNumber(lesson1, 0));
-// Output: 'Matématica'
+  // Output: 'Matématica'
 
+  // Exercício 08
+  const isKeyValue = (object, key, value) => {
+    let array = Object.entries(object);
+    let exists = false;
+    for (let index in array) {
+        if (array[index][0] === key && array[index][1] === value) exists = true;
+    }
+    return exists;
+  }
+
+  console.log(isKeyValue(lesson1, 'turno', 'noite'));
+  console.log(isKeyValue(lesson2, 'turno', 'noite'));
+  console.log(isKeyValue(lesson3, 'turno', 'noite'));
