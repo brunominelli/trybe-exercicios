@@ -21,3 +21,9 @@ const lesson1 = {
   // Exercício 01
   const setKey = (object, key, value) => object[key] = value;
   setKey(lesson2, 'turno', 'noite');
+
+  // Exercício 02
+  const listKeys = (object) => Object.keys(object);
+  console.log(listKeys(lesson1));
+  console.log(listKeys(lesson2));
+  console.log(listKeys(lesson3));
