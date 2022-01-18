@@ -24,12 +24,32 @@ const mage = {
     const minimumDamage = 15;
     const dragonDamage = Math.floor(Math.random() * (dragon.strength - minimumDamage + 1) + minimumDamage);
     return dragonDamage;
-  }
+  };
 
-  const warriorAttack = () => {
+  const warriorAttack = (warrior) => {
       const minimumDamage = warrior.strength;
       const maximumDamage = warrior.strength * warrior.weaponDmg;
       const warriorDamage = Math.floor(Math.random() * (maximumDamage - minimumDamage + 1) + minimumDamage);
       return warriorDamage;
   }
-  console.log(warriorAttack());
+  
+  const mageAttack = () => {
+      const mana = mage.mana;
+      const minimumDamage = mage.intelligence;
+      const maximumDamage = mage.intelligence * 2;
+      const message = 'Não possui mana suficiente';
+      const manaTrack = {
+          mana: 0,
+          damage: message,
+      }
+
+      if (mana > 15) {
+        const mageDamage = Math.floor(Math.random() * (maximumDamage - minimumDamage + 1) + minimumDamage);
+        manaTrack.mana = 15;
+        manaTrack.damage = mageDamage;
+      } else manaTrack.damage = message;
+      return manaTrack;
+      
+  };
+
+  console.log(mageAttack());
