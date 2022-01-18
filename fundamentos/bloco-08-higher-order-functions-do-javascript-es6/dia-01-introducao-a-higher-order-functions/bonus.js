@@ -49,7 +49,11 @@ const mage = {
         manaTrack.damage = mageDamage;
       } else manaTrack.damage = message;
       return manaTrack;
-      
   };
 
-  console.log(mageAttack());
+  const gameActions = {
+    warriorTurn: () => {
+        warrior.damage = warriorAttack(warrior);
+        dragon.healthPoints -= warrior.damage;
+      },
+  };
