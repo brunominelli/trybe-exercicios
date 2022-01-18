@@ -52,8 +52,59 @@ const mage = {
   };
 
   const gameActions = {
-    warriorTurn: () => {
-        warrior.damage = warriorAttack(warrior);
-        dragon.healthPoints -= warrior.damage;
-      },
+    warriorTurn: (warriorAttack) => {
+      warrior.damage = warriorAttack(warrior);
+      dragon.healthPoints -= warrior.damage;
+    },
+
+    mageTurn: (mageAttack) => {
+        mage.damage = mageAttack(mage).damage;
+        mage.mana -= mageAttack(mage).mana;
+        dragon.healthPoints -= mage.damage;
+    },
+
+    dragonTurn: (dragonAttack) => {
+        dragon.damage = dragonAttack(dragon);
+        warrior.healthPoints -= dragon.damage;
+        mage.healthPoints -= dragon.damage;
+    },
+
+    turn: () => battleMembers
   };
+
+  let turn = 0;
+  
+
+  console.log(`MAGO
+  Pontos de Vida: ${mage.healthPoints}
+  Pontos de Mana: ${mage.mana}
+  Dano Causado: ${mage.damage}\n`);
+
+  console.log(`GUERREIRO
+  Pontos de Vida: ${warrior.healthPoints}
+  Dano Causado: ${warrior.damage}\n`);
+
+  console.log(`DRAGÃO
+  Pontos de Vida: ${dragon.healthPoints}
+  Dano Causado: ${dragon.damage}\n`);
+
+  while (dragon.healthPoints > 0) {
+    gameActions.warriorTurn(warriorAttack);
+    gameActions.mageTurn(mageAttack);
+    gameActions.dragonTurn(dragonAttack);
+    console.log(`${turn += 1}º Turno`);
+
+    console.log(`MAGO
+    Pontos de Vida: ${mage.healthPoints}
+    Pontos de Mana: ${mage.mana}
+    Dano Causado: ${mage.damage}\n`);
+
+    console.log(`GUERREIRO
+    Pontos de Vida: ${warrior.healthPoints}
+    Dano Causado: ${warrior.damage}\n`);
+
+    console.log(`DRAGÃO
+    Pontos de Vida: ${dragon.healthPoints}
+    Dano Causado: ${dragon.damage}\n`);
+    gameActions.turn();
+  }
