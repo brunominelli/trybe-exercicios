@@ -21,5 +21,3 @@ const people = [
   }
   
   console.log(verifyAges(people, 18));
-
-  
