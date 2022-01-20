@@ -1,4 +1,4 @@
-### Dia 02 - Higher Order Functions - forEach, find, some, every, sort
+### Dia 02 - JavaScript ES6 - Higher Order Functions - forEach, find, some, every, sort
 
 Os principais tópicos abordados foram:
 

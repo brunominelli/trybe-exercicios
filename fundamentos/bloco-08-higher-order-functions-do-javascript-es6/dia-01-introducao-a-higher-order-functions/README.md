@@ -1,4 +1,4 @@
-### Dia 01 - Introdução a Higher Order Functions
+### Dia 01 - JavaScript ES6 - Introdução a Higher Order Functions
 
 Os principais tópicos abordados foram:
 
