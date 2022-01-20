@@ -2,16 +2,8 @@
 
 Os principais tópicos abordados foram:
 
-* Como aplicar corretamente spread operator.
+* Utilizar a função Array.map para manipular e construir arrays.
 
-* Como aplicar corretamente parâmetro rest.
+* Utilizar a função Array.filter para filtrar um array.
 
-* Como aplicar corretamente object destructuring.
-
-* Como aplicar corretamente array destructuring.
-
-* Como aplicar corretamente default destructuring.
-
-* Como aplicar corretamente abbreviation object literal.
-
-* Como aplicar corretamente default params.
+* Aprender a usar de forma conjunta as Higher Order Functions.
