@@ -88,10 +88,10 @@ const books = [
   
   function oldBooksOrdered() {
     // escreva seu código aqui
+    const currentYear = new Date().getFullYear();
     return books.filter((book) => {
-      if (2022 - book.releaseYear > 60) return book;
+      if (currentYear - book.releaseYear > 60) return book;
     }).sort((oldBook, youngBook) => oldBook.releaseYear - youngBook.releaseYear);
   }
 
   console.log(oldBooksOrdered());
-  
