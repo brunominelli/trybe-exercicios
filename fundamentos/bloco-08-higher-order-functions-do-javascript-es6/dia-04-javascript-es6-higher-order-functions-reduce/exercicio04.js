@@ -62,3 +62,22 @@ const books = [
   ];
   
   // Adicione o código do exercício aqui:
+  const expectedResult = {
+    id: 1,
+    name: 'As Crônicas de Gelo e Fogo',
+    genre: 'Fantasia',
+    author: {
+      name: 'George R. R. Martin',
+      birthYear: 1948,
+    },
+    releaseYear: 1991,
+  }
+  
+  function longestNamedBook() {
+    // escreva seu código aqui
+    return books.reduce((longestName, book) => {
+      if (book.name.length > longestName.name.length) return book;
+      return longestName;
+    });
+  };
+  console.log(longestNamedBook());
