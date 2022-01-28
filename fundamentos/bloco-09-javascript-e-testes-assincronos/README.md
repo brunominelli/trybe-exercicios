@@ -1,0 +1,3 @@
+## Bloco 09 - JavaScript e Testes Assíncronos
+
+Neste bloco eu aprendi sobre assincronicidade em JavaScript a fim de aplicar os conhecimentos no desenvolvimento web de modo que meus códigos sejam carregados para a pessoa usuária em paralelo com outras aplicações. O objetivo foi nos ensinar como otimizar os sistemas e garantir que a página carregue os elementos necessários para que as pessoas usuárias tenham o serviço sempre disponível.
