@@ -1,4 +1,4 @@
-### Dia 01 -    
+### Dia 01 - JavaScript Assíncrono e Callbacks
 
 Os principais tópicos abordados foram:
 
