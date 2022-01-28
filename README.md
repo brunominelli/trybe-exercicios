@@ -65,18 +65,19 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 
 ##### Bloco 8: JavaScript ES6
 
-- [X] 8-1: _JavaScript ES6 - Introdução a Higher Order Functions
-- [X] 8-2: _JavaScript ES6 - Higher Order Functions - forEach, find, some, every, sort
-- [X] 8-3: _JavaScript ES6 - Higher Order Functions - map e filter
-- [X] 8-4: _JavaScript ES6 - Higher Order Functions - reduce
-- [X] 8-5: _JavaScript ES6 - spread operator, parâmetro rest, destructuring e mais
+- [X] 8-1: _JavaScript ES6 - Introdução a Higher Order Functions_
+- [X] 8-2: _JavaScript ES6 - Higher Order Functions - forEach, find, some, every, sort_
+- [X] 8-3: _JavaScript ES6 - Higher Order Functions - map e filter_
+- [X] 8-4: _JavaScript ES6 - Higher Order Functions - reduce_
+- [X] 8-5: _JavaScript ES6 - spread operator, parâmetro rest, destructuring e mais_
 - [X] 8-6: _[Projeto - Zoo functions](https://obrunominelli.github.io/projetos/zoo-functions/)_
 
-##### Bloco 9: Assincronicidade & Callbacks
+##### Bloco 9: JavaScript e Testes Assíncronos
 
 - [ ] 9-1: _JavaScript Assíncrono e Callbacks_
-- [ ] 9-2: _JavaScript Promises_
-- [ ] 9-3: _[Projeto - Carrinho de Compras]()_
+- [ ] 9-2: _JavaScript Assíncrono - Fetch API e async/await_
+- [ ] 9-3: _Jest - Testes Assíncronos_
+- [ ] 9-4: _[Projeto - Carrinho de Compras]()_
 
 ##### Bloco 10: Jest
 
