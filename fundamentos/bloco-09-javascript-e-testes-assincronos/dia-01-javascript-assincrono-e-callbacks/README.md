@@ -1,4 +1,4 @@
-### Dia 01 - JavaScript Assíncrono e Callbacks
+### Dia 01 -    
 
 Os principais tópicos abordados foram:
 
@@ -9,3 +9,11 @@ Os principais tópicos abordados foram:
 * Testes com callbacks utilizando o Jest.
 
 * Setup and Teardown.
+
+* Aplicar corretamente operações assíncronas.
+
+* Utilizar callbacks corretamente.
+
+* Utilizar o Jest para testar suas callbacks .
+
+* Reaproveitar configurações para diversos testes por meio do uso de beforeEach e afterEach.
