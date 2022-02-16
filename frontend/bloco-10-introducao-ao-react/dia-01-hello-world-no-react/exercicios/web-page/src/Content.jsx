@@ -28,8 +28,8 @@ class Content extends Component {
     return (
       <main className='content'>
           {conteudos.map((element) => (
-              <section key={element.conteudo} className=''>
-                  <h2>{`O conteúdo é: ${element.conteudo}`}</h2>
+              <section key={element.conteudo} className='content-card'>
+                  <h2 className='content-title'>{`O conteúdo é: ${element.conteudo}`}</h2>
                   <p>{`Status: ${element.status}`}</p>
                   <p>{`Bloco: ${element.bloco}`}</p>
               </section>
