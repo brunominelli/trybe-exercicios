@@ -25,7 +25,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [X] 3-2: _HTML & CSS - Primeiros passos em CSS_
 - [X] 3-3: _HTML & CSS - Seletores e posicionamento_
 - [X] 3-4: _HTML Semântico_
-- [X] 3-5: _[Projeto - HTML & CSS](https://obrunominelli.github.io/projetos/lessons-learned/)_
+- [X] 3-5: _[Projeto - HTML & CSS](https://obrunominelli.github.io/projetos/trybe/lessons-learned/)_
 
 ##### Bloco 4: Introdução - JavaScript
 
@@ -33,7 +33,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [X] 4-2: _JavaScript - Array e loop For_
 - [X] 4-3: _JavaScript - Lógica de Programação e Algoritmos_
 - [X] 4-4: _JavaScript - Objetos e funções_
-- [X] 4-5: _[Projeto - Playground Functions](https://obrunominelli.github.io/projetos/lessons-learned/)_
+- [X] 4-5: _[Projeto - Playground Functions](https://obrunominelli.github.io/projetos/trybe/playground-functions/)_
 
 ##### Bloco 5: Introdução - JavaScript - Projetos
 
@@ -41,11 +41,11 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [X] 5-2: _JavaScript - Trabalhando com elementos_
 - [X] 5-3: _JavaScript - Eventos_
 - [X] 5-4: _JavaScript - Web Storage_
-- [X] 5-5: _[Projeto - Meme Generator](https://obrunominelli.github.io/projetos/meme-generator/)_
-- [X] 5-6: _[Projeto - Arte com Pixels](https://obrunominelli.github.io/projetos/pixel-art/)_
-- [X] 5-7: _[Projeto - Lista de Tarefas](https://obrunominelli.github.io/projetos/to-do-list/)_
-- [X] 5-7: _[Projeto - Adivinhe a Cor](https://obrunominelli.github.io/projetos/color-guess/)_
-- [X] 5-7: _[Projeto - Carta Misteriosa](https://obrunominelli.github.io/projetos/mistery-letter/)_
+- [X] 5-5: _[Projeto - Meme Generator](https://obrunominelli.github.io/projetos/trybe/meme-generator/)_
+- [X] 5-6: _[Projeto - Arte com Pixels](https://obrunominelli.github.io/projetos/trybe/pixel-art/)_
+- [X] 5-7: _[Projeto - Lista de Tarefas](https://obrunominelli.github.io/projetos/trybe/to-do-list/)_
+- [X] 5-7: _[Projeto - Adivinhe a Cor](https://obrunominelli.github.io/projetos/trybe/color-guess/)_
+- [X] 5-7: _[Projeto - Carta Misteriosa](https://obrunominelli.github.io/projetos/trybe/mistery-letter/)_
 
 ##### Bloco 6: HTML & CSS Avançado
 
@@ -54,14 +54,14 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [X] 6-3: _CSS Flexbox - Part 1_
 - [X] 6-4: _CSS Flexbox - Part 2_
 - [X] 6-5: _CSS Responsivo - Mobile First_
-- [X] 6-6: _[Projeto - Trybewarts](https://obrunominelli.github.io/projetos/trybewarts/)_
+- [X] 6-6: _[Projeto - Trybewarts](https://obrunominelli.github.io/projetos/trybe/trybewarts/)_
 
 ##### Bloco 7: JavaScript ES6 & Testes Unitários
 
 - [X] 7-1: _JavaScript ES6 - let, const, arrow functions e template literals_
 - [X] 7-2: _JavaScript ES6 - Objects_
 - [X] 7-3: _Testes unitários em JavaScript_
-- [X] 7-4: _[Projeto - JavaScript Testes Unitários](https://obrunominelli.github.io/projetos/js-unit-tests/)_
+- [X] 7-4: _[Projeto - JavaScript Testes Unitários](https://obrunominelli.github.io/projetos/trybe/js-unit-tests/)_
 
 ##### Bloco 8: JavaScript ES6
 
@@ -70,29 +70,22 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [X] 8-3: _JavaScript ES6 - Higher Order Functions - map e filter_
 - [X] 8-4: _JavaScript ES6 - Higher Order Functions - reduce_
 - [X] 8-5: _JavaScript ES6 - spread operator, parâmetro rest, destructuring e mais_
-- [X] 8-6: _[Projeto - Zoo functions](https://obrunominelli.github.io/projetos/zoo-functions/)_
+- [X] 8-6: _[Projeto - Zoo functions](https://obrunominelli.github.io/projetos/trybe/zoo-functions/)_
 
 ##### Bloco 9: JavaScript e Testes Assíncronos
 
 - [X] 9-1: _JavaScript Assíncrono e Callbacks_
 - [X] 9-2: _JavaScript Assíncrono - Fetch API e async/await_
-- [ ] 9-3: _Jest - Testes Assíncronos_
-- [ ] 9-4: _[Projeto - Carrinho de Compras]()_
-
-##### Bloco 10: Jest
-
-- [ ] 10-1: _Primeiros passos no Jest_
-- [ ] 10-2: _Jest - Testes Assíncronos_
-- [ ] 10-3: _Jest - Simulando comportamentos_
-- [ ] 10-4: _[Projeto - Jest Assíncrono e Mocking]()_
+- [X] 9-3: _Jest - Testes Assíncronos_
+- [X] 9-4: _[Projeto - Carrinho de Compras](ttps://obrunominelli.github.io/projetos/trybe/shopping-cart/)_
 
 ## Desenvolvimento Front-End :hourglass_flowing_sand:
 
-##### Bloco 11: Introdução - React
+##### Bloco 10: Introdução - React
 
-- [ ] 11-1: _'Hello, world!' no React!_
-- [ ] 11-2: _Componentes React_
-- [ ] 11-3: _[Projeto - Movie Cards Library]()_
+- [ ] 10-1: _'Hello, world!' no React!_
+- [ ] 10-2: _Componentes React_
+- [ ] 10-3: _[Projeto - Sistema Solar]()_
 
 ##### Bloco 12: React
 
