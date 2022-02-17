@@ -1,4 +1,4 @@
-## Dia 01 - Hello World
+## Dia 01 - Hello World no React
 
 Os principais tópicos abordados foram:
 
