@@ -1,24 +1,44 @@
-import './App.css';
 import { Component } from 'react';
 
 class App extends Component {
   constructor() {
     super();
-    this.firstButtonClick = this.firstButtonClick.bind(this);
-    this.secondButtonClick = this.secondButtonClick.bind(this);
-    this.thirdButtonClick = this.thirdButtonClick.bind(this);
+    
+    this.buttonOne = this.buttonOne.bind(this);
+    this.buttonTwo = this.buttonTwo.bind(this);
+    this.buttonThree = this.buttonThree.bind(this);
+    
+    this.state = {
+      buttonOneClicks: 0,
+      buttonTwoClicks: 0,
+      buttonThreeClicks: 0,
+    };
   }
 
-  firstButtonClick = () => console.log('Você clicou no primeiro botão');
-  secondButtonClick = () => console.log('Você clicou no segundo botão');
-  thirdButtonClick = () => console.log('Você clicou no terceiro botão');
+  buttonOne() {
+    this.setState(({ buttonOneClicks }) => ({
+      buttonOneClicks: buttonOneClicks + 1,
+    }));
+  };
+
+  buttonTwo() {
+    this.setState(({ buttonTwoClicks }) => ({
+      buttonTwoClicks: buttonTwoClicks + 1,
+    }));
+  };
+
+  buttonThree() {
+    this.setState(({ buttonThreeClicks }) => ({
+      buttonThreeClicks: buttonThreeClicks + 1,
+    }));
+  };
 
   render() {
     return (
       <>
-        <button onClick={ this.firstButtonClick }>Primeiro Botão</button>
-        <button onClick={ this.secondButtonClick }>Segundo Botão</button>
-        <button onClick={ this.thirdButtonClick }>Terceiro Botão</button>
+        <button onClick={ this.buttonOne }>{ this.state.buttonOneClicks }</button>
+        <button onClick={ this.buttonTwo }>{ this.state.buttonTwoClicks }</button>
+        <button onClick={ this.buttonThree }>{ this.state.buttonThreeClicks }</button>
       </>
     );
   }
