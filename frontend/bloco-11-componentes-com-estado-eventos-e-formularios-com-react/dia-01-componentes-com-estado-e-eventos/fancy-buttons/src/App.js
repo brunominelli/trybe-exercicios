@@ -18,27 +18,38 @@ class App extends Component {
   buttonOne() {
     this.setState(({ buttonOneClicks }) => ({
       buttonOneClicks: buttonOneClicks + 1,
-    }));
+    }), () => {
+      console.log(this.setButtonColor(this.state.buttonOneClicks));
+    });
   };
 
   buttonTwo() {
     this.setState(({ buttonTwoClicks }) => ({
       buttonTwoClicks: buttonTwoClicks + 1,
-    }));
+    }), () => {
+      console.log(this.setButtonColor(this.state.buttonTwoClicks));
+    });
   };
 
   buttonThree() {
     this.setState(({ buttonThreeClicks }) => ({
       buttonThreeClicks: buttonThreeClicks + 1,
-    }));
+    }), () => {
+      console.log(this.setButtonColor(this.state.buttonThreeClicks));
+    });
   };
 
+  setButtonColor(number) {
+    return number % 2 === 0 ? 'green' : 'white';
+  }
+
   render() {
+    const { buttonOneClicks, buttonTwoClicks, buttonThreeClicks } = this.state;
     return (
       <>
-        <button onClick={ this.buttonOne }>{ this.state.buttonOneClicks }</button>
-        <button onClick={ this.buttonTwo }>{ this.state.buttonTwoClicks }</button>
-        <button onClick={ this.buttonThree }>{ this.state.buttonThreeClicks }</button>
+        <button onClick={ this.buttonOne } style={{ backgroundColor: this.setButtonColor(buttonOneClicks) }} >{ buttonOneClicks }</button>
+        <button onClick={ this.buttonTwo } style={{ backgroundColor:this.setButtonColor(buttonTwoClicks) }} >{ buttonTwoClicks }</button>
+        <button onClick={ this.buttonThree } style={{ backgroundColor:this.setButtonColor(buttonThreeClicks) }} >{ buttonThreeClicks }</button>
       </>
     );
   }
