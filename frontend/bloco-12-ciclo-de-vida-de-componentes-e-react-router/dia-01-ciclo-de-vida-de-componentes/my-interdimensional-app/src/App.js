@@ -32,7 +32,7 @@ class App extends Component {
                 <img src={image} alt={name}/>
               </div>
             )
-          })}
+          })} 
         </div>
       </div>
     );
