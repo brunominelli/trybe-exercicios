@@ -36,6 +36,6 @@ describe('teste da aplicação toda', () => {
 
     const notFoundTitle = screen.getByRole('heading',
       { name: 'Página não encontrada' });
-    expect(notFoundTitle).toBeInTheDocument();
+    expect(notFoundTitle).toBeInTheDocument(); 
   });
 });
